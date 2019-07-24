@@ -27,13 +27,13 @@ function displayItems() {
   //Create the database query quantity string
   queryQuantity = "Select * From products";
   //now make the query
-  connection.query(queryQuantity, function(err, res) {
+  connection.query(queryQuantity, function(err, data) {
     if (err) throw err;
     console.log("Current Inventory:  ");
     console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~/n");
 //
     var queryOutput = "";
-    for (var i = 0; i < data.legnth; i++){
+    for (var i = 0; i < data.length; i++){
       queryOutput = "";
       queryOutput += "Item ID: " + data[i].item_id + " // ";
       queryOutput += "Item Name: " + data[i].product_name + "  //  ";
