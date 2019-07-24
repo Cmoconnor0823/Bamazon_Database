@@ -1,7 +1,7 @@
 //First input npm requirements then connect to the mySQL database
 
 var mysql = require("mysql");
-var inquirer = require("inquirer");
+//var inquirer = require("inquirer");
 
 var connection = mysql.createConnection({
     host:"localhost",
@@ -11,15 +11,25 @@ var connection = mysql.createConnection({
     user:"root",
 
     password: "Stitch626",
-    database: "bamazon_db"
+    database: "bamazon_schema"
 });
 
 
 connection.connect(function(err) {
     if (err) throw err;
-    runQuestions();
+    displayItems();
   });
 
+    //first begin by displaying inventory items from bamazon database
+    // show the item's id, the name and then the price
+function displayItems() {
+  connection.query("Select item_id, product_name, price From products", function(err, res) {
+    if (err) throw err;
+
+    console.log(res);
+    connection.end();
+  });
+}
   //begin run  inquirer questions use last  in class activity for example
 
   //will need to first ask user what product they would like--by name but reference by unique id

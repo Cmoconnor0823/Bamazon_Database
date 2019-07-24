@@ -1,3 +1,6 @@
+drop database if EXISTS bamazon_schema;
+create database bamazon_schema;
+
 use  bamazon_schema;
 Drop table if exists products;
 CREATE TABLE products(
