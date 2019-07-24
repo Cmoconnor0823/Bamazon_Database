@@ -23,11 +23,25 @@ connection.connect(function(err) {
     //first begin by displaying inventory items from bamazon database
     // show the item's id, the name and then the price
 function displayItems() {
-  connection.query("Select item_id, product_name, price From products", function(err, res) {
+  
+  //Create the database query quantity string
+  queryQuantity = "Select * From products";
+  //now make the query
+  connection.query(queryQuantity, function(err, res) {
     if (err) throw err;
-
-    console.log(res);
-    connection.end();
+    console.log("Current Inventory:  ");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~/n");
+//
+    var queryOutput = "";
+    for (var i = 0; i < data.legnth; i++){
+      queryOutput = "";
+      queryOutput += "Item ID: " + data[i].item_id + " // ";
+      queryOutput += "Item Name: " + data[i].product_name + "  //  ";
+      queryOutput += "Department: " + data[i].department_name + "  //  "; 
+      queryOutput += "Price: $" + data[i].price + "\n";
+      console.log(queryOutput);
+    }
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     promptBuy();
   });
 }
@@ -80,16 +94,34 @@ filter: Number
           // now deduct the user's chosen items from the inventory
           //
           // Create the update stock function
-					var updateQueryStr = 'UPDATE products SET stock_quantity = ' + (productData.stock_quantity - quantity) + ' WHERE item_id = ' + item;
-					// console.log('updateQueryStr = ' + updateQueryStr);
+					var updateQueryQuantity = 'UPDATE products SET stock_quantity = ' + (productData.stock_quantity - quantity) + ' WHERE item_id = ' + item;
+					 console.log('updateQueryQuantity = ' + updateQueryQuantity);
+        
+           // Update the inventory
+					connection.query(updateQueryQuantity, function(err, data) {
+						if (err) throw err;
+
+						console.log('Your order has been placed! Your total is $' + productData.price * quantity);
+						console.log('Thank you for shopping at Bamazon_db!');
+						console.log("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+
+           // End the database connection
+						connection.end();
+
        
-       
-        }
+        })
+        // create a of out of stock back up error 
+    } else{
+      console.log('Sorry, there is not enough of that item in stock, your order can not be placed.');
+					console.log('Please re-select your order.');
+					console.log("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+
+					displayItems();
     }
+  }
   })
 })
 }
 
-  // create a of out of stock back up error 
 
   //once item is deducted from the inventory display item shipped and total cost
