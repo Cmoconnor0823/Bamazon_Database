@@ -27,6 +27,7 @@ connection.connect(function(err) {
 
   // then ask user how much of the item they would like
   // now deduct the user's chosen items from the inventory
+  //
   // create a of out of stock back up error 
 
   //once item is deducted from the inventory display item shipped and total cost
