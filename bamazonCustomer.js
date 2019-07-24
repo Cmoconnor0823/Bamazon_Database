@@ -17,10 +17,14 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
     if (err) throw err;
-    displayItems();
+    runBamazonDB();
   });
 
-    //first begin by displaying inventory items from bamazon database
+  function runBamazonDB(){
+    displayItems();
+  }
+
+    // display inventory items from bamazon database
     // show the item's id, the name and then the price
 function displayItems() {
   
@@ -30,14 +34,14 @@ function displayItems() {
   connection.query(queryQuantity, function(err, data) {
     if (err) throw err;
     console.log("Current Inventory:  ");
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~/n");
-//
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
     var queryOutput = "";
     for (var i = 0; i < data.length; i++){
       queryOutput = "";
       queryOutput += "Item ID: " + data[i].item_id + " // ";
       queryOutput += "Item Name: " + data[i].product_name + "  //  ";
-      queryOutput += "Department: " + data[i].department_name + "  //  "; 
+      //queryOutput += "Department: " + data[i].department_name + "  //  "; 
       queryOutput += "Price: $" + data[i].price + "\n";
       console.log(queryOutput);
     }
@@ -67,7 +71,8 @@ message: "Now please select the quantity of the item you would like to order.",
 filter: Number
   }
 ]).then(function(input) {
-  console.log('Customer has selected: \n    item_id = '  + input.item_id + '\n    quantity = ' + input.quantity);
+  //is there a way to show the name instead of the item's id?
+  console.log('You have selected: \n    Selected Item id # = '  + input.item_id + '\n    quantity = ' + input.quantity);
 
   var item = input.item_id;
   var quantity = input.quantity;
@@ -84,27 +89,31 @@ filter: Number
     } else {
       var productData = data[0]
 
-       console.log('productData = ' + JSON.stringify(productData));
-				console.log('productData.stock_quantity = ' + productData.stock_quantity);
+       //console.log('productData = ' + JSON.stringify(productData));
+			//	console.log('productData.stock_quantity = ' + productData.stock_quantity);
 
         // If the quantity requested by the user is in stock
         if (quantity <= productData.stock_quantity) {
           console.log("Congratulations, the Item you requested is in stock! Placing order...")
-       
+          
           // now deduct the user's chosen items from the inventory
           //
           // Create the update stock function
 					var updateQueryQuantity = 'UPDATE products SET stock_quantity = ' + (productData.stock_quantity - quantity) + ' WHERE item_id = ' + item;
-					 console.log('updateQueryQuantity = ' + updateQueryQuantity);
-        
-           // Update the inventory
+         // console.log('updateQueryQuantity = ' + updateQueryQuantity);
+          
+          // Update the inventory
 					connection.query(updateQueryQuantity, function(err, data) {
-						if (err) throw err;
-
+            if (err) throw err;
+            
+            //once item is deducted from the inventory display item shipped and total cost
 						console.log('Your order has been placed! Your total is $' + productData.price * quantity);
 						console.log('Thank you for shopping at Bamazon_db!');
 						console.log("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 
+
+            ////instead of end cpnnectipm here can i ask the user if they
+            //want to place a second order
            // End the database connection
 						connection.end();
 
@@ -123,5 +132,3 @@ filter: Number
 })
 }
 
-
-  //once item is deducted from the inventory display item shipped and total cost
