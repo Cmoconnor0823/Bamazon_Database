@@ -21,6 +21,10 @@ When the customer interface application is run, first the user will be welcomed 
 <h1>Bamazon Demo</h1>
 Click the link below to view a short video demonstrating the application in action.
 
+* [This link will open a video showing the application in action in Git Bash.](https://drive.google.com/file/d/1ybxCJobSrVJ_C33ijqnERouPAQQmhEat/view)
+
+* [This link will open a video the MySql Database live updating the inventory per user order.](https://drive.google.com/file/d/1LMICuReMxqFZpWBjRFiEvnAMCslH24Ez/view)
+
 <h2>Technology</h2>
 This page was built with the following NPM Modules, and technologies:
 
