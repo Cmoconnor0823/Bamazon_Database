@@ -8,10 +8,10 @@ In order to run this application you will need to run the npm install command, i
 To run the customer interface please follow the steps below:
 
 
-*git clone git@github.com:/bamazon.git
-*cd bamazon
-*npm install
-*node bamazonCustomer.js
+**https://github.com/Cmoconnor0823/Bamazon_Database.git**
+**cd bamazon**
+**npm install**
+**node bamazonCustomer.js**
 
 
 <h3>Customer Interface</h3>
