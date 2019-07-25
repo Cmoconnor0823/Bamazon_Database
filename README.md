@@ -20,3 +20,27 @@ When the customer interface application is run, first the user will be welcomed 
 
 <h1>Bamazon Demo</h1>
 Click the link below to view a short video demonstrating the application in action.
+
+<h2>Technology</h2>
+This page was built with the following NPM Modules, and technologies:
+
+
+* [mySQL](https://www.npmjs.com/package/mysql)
+
+* [Inquirer](https://www.npmjs.com/package/inquirer)
+
+* [mySQL Workbench](https://www.mysql.com/products/workbench/)
+
+* [Git Bash](https://gitforwindows.org/)
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+* [JavaScript]
+
+
+
+
+
+For comments/ concerns contact the project 
+Author: Caitlin O'Connor  
+At: Cmoconnor0823@gmail.com
