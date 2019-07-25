@@ -22,11 +22,11 @@ function validateInput(value) {
   if (integer && (sign === 1)) {
     return true;
   } else {
-    return 'Error: Please input a non negative item quantity number to order.';
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`")
+    console.log ('Error: Please input a non negative item quantity number to order.');
     
-    ///some how the program needs to restart here????
+    ///some how the program needs to restart here
     runBamazonDB();
-    connection.end();
   }
 }
 
@@ -117,9 +117,11 @@ function promptBuy() {
           
           // now deduct the user's chosen items from the inventory
           //
+
+          //how do i hide this function from the terminal
           // Create the update stock function
           var updateQueryQuantity = 'UPDATE products SET stock_quantity = ' + (productData.stock_quantity - quantity) + ' WHERE item_id = ' + item;
-          // console.log('updateQueryQuantity = ' + updateQueryQuantity);
+           //console.log('updateQueryQuantity = ' + updateQueryQuantity);
           
           // Update the inventory
           connection.query(updateQueryQuantity, function (err, data) {
