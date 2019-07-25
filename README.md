@@ -1,2 +1,9 @@
 # Bamazon_Database
-A simple app to demonstrate the use of MySql in the context of a store inventory program
+<h1>Description</h1>
+A simple app to demonstrate the use of the Inquirer and MySql npm's in the context of a store inventory program. 
+
+<h2>Set up</h2>
+In order to run this application you will need to run the npm install command, in the file destination in console log. This should install the npm mySql and the npm Inquirer.
+
+<h3>Customer Interface</h3>
+When the customer interface application is run, first the user will be welcomed to the site, and the presented with a current inventory of items, listed in raw detail the bamazon_db.sql file. The user is then prompted with a question asking them to select a item's id # and then how many of the item the user would like to order. The application will then verify the user's order and deduct the remaining total from the database. Finally the user is prompted to see if they would like to order another item, and if so the program will continue and if not the program will thank the user then end.
