@@ -1,11 +1,12 @@
 # Bamazon_Database
 <h1>Description</h1>
-A simple app to demonstrate the use of the Inquirer and MySql npm's in the context of a store inventory program. 
+<h5>An app to demonstrate the use of the Inquirer and MySql npm's in the context of a store inventory program. </h5>
+![Image of loaded Node application](/img/Bamazon.png)
 
 <h2>Set up</h2>
-In order to run this application you will need to run the npm install command, in the file destination in console log. This should install the npm mySql and the npm Inquirer.
+<h5>In order to run this application you will need to run the npm install command, in the file destination in console log. This should install the npm mySql and the npm Inquirer.
 
-To run the customer interface please follow the steps below:
+To run the customer interface please follow the steps below: </h5>
 
 
 * clone into the repo using this link: https://github.com/Cmoconnor0823/Bamazon_Database.git 
@@ -19,7 +20,7 @@ When the customer interface application is run, first the user will be welcomed 
 
 
 <h1>Bamazon Demo</h1>
-Click the link below to view a short video demonstrating the application in action.
+<h5>Click the link below to view a short video demonstrating the application in action.</h5>
 
 * [This link will open a video showing the application in action in Git Bash.](https://drive.google.com/file/d/1ybxCJobSrVJ_C33ijqnERouPAQQmhEat/view)
 
@@ -39,7 +40,7 @@ This page was built with the following NPM Modules, and technologies:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-* [JavaScript]
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 
 
