@@ -1,7 +1,7 @@
 # Bamazon_Database
 <h1>Description</h1>
 <h5>An app to demonstrate the use of the Inquirer and MySql npm's in the context of a store inventory program. </h5>
-![Image of loaded Node application](/img/Bamazon.png)
+![Image of loaded Node application](images/Bamazon.png)
 
 <h2>Set up</h2>
 <h5>In order to run this application you will need to run the npm install command, in the file destination in console log. This should install the npm mySql and the npm Inquirer.
@@ -22,13 +22,13 @@ To run the customer interface please follow the steps below: </h5>
 <h1>Bamazon Demo</h1>
 <h5>Click the link below to view a short video demonstrating the application in action.</h5>
 
-![Gif of Node application](/public/images/Bamazon1.gif)
+![Gif of Node application](images/Bamazon1.gif)
 <br>
-![Gif of Node application](public/images/Bamazon2.gif)
+![Gif of Node application](images/Bamazon2.gif)
 <br>
-![Gif of Node application](public/images/Bamazon3.gif)
+![Gif of Node application](images/Bamazon3.gif)
 <br>
-![Gif of Node application](public/images/Bamazon4.gif)
+![Gif of Node application](images/Bamazon4.gif)
 <br>
 
 * [This link will open a video showing the application in action in Git Bash.](https://drive.google.com/file/d/1ybxCJobSrVJ_C33ijqnERouPAQQmhEat/view)
