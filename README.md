@@ -16,11 +16,20 @@ To run the customer interface please follow the steps below: </h5>
 
 
 <h3>Customer Interface</h3>
-When the customer interface application is run, first the user will be welcomed to the site, and the presented with a current inventory of items, listed in raw detail the bamazon_db.sql file. The user is then prompted with a question asking them to select a item's id # and then how many of the item the user would like to order. The application will then verify the user's order and deduct the remaining total from the database. Finally the user is prompted to see if they would like to order another item, and if so the program will continue and if not the program will thank the user then end.
+<h5>When the customer interface application is run, first the user will be welcomed to the site, and the presented with a current inventory of items, listed in raw detail the bamazon_db.sql file. The user is then prompted with a question asking them to select a item's id # and then how many of the item the user would like to order. The application will then verify the user's order and deduct the remaining total from the database. Finally the user is prompted to see if they would like to order another item, and if so the program will continue and if not the program will thank the user then end.</h5>
 
 
 <h1>Bamazon Demo</h1>
 <h5>Click the link below to view a short video demonstrating the application in action.</h5>
+
+![Gif of Node application](/public/images/Bamazon1.gif)
+<br>
+![Gif of Node application](public/images/Bamazon2.gif)
+<br>
+![Gif of Node application](public/images/Bamazon3.gif)
+<br>
+![Gif of Node application](public/images/Bamazon4.gif)
+<br>
 
 * [This link will open a video showing the application in action in Git Bash.](https://drive.google.com/file/d/1ybxCJobSrVJ_C33ijqnERouPAQQmhEat/view)
 
