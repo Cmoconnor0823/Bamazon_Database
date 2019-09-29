@@ -2,6 +2,8 @@
 <h1>Description</h1>
 <h5>An app to demonstrate the use of the Inquirer and MySql npm's in the context of a store inventory program. </h5>
 
+![Gif of Node application](images/Bamazon.png)
+
 <h2>Set up</h2>
 <h5>In order to run this application you will need to run the npm install command, in the file destination in console log. This should install the npm mySql and the npm Inquirer.
 
